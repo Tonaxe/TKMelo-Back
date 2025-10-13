@@ -1,0 +1,17 @@
+C:\Users\yassi\source\repos\TKMelo.Library\bin\Debug\net8.0\TKMelo.Library.deps.json
+C:\Users\yassi\source\repos\TKMelo.Library\bin\Debug\net8.0\TKMelo.Library.dll
+C:\Users\yassi\source\repos\TKMelo.Library\bin\Debug\net8.0\TKMelo.Library.pdb
+C:\Users\yassi\source\repos\TKMelo.Library\bin\Debug\net8.0\TKMelo.Models.dll
+C:\Users\yassi\source\repos\TKMelo.Library\bin\Debug\net8.0\TKMelo.Persistance.dll
+C:\Users\yassi\source\repos\TKMelo.Library\bin\Debug\net8.0\TKMelo.Models.pdb
+C:\Users\yassi\source\repos\TKMelo.Library\bin\Debug\net8.0\TKMelo.Persistance.pdb
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.Library.csproj.AssemblyReference.cache
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.Library.AssemblyInfoInputs.cache
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.Library.AssemblyInfo.cs
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.Library.csproj.CoreCompileInputs.cache
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.L.6870F690.Up2Date
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.Library.dll
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\refint\TKMelo.Library.dll
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\TKMelo.Library.pdb
+C:\Users\yassi\source\repos\TKMelo.Library\obj\Debug\net8.0\ref\TKMelo.Library.dll

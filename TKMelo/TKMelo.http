@@ -1,0 +1,6 @@
+@TKMelo_HostAddress = http://localhost:5225
+
+GET {{TKMelo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
