@@ -1,4 +1,6 @@
-﻿namespace TKMelo.Models.Entities
+﻿using System.Net;
+
+namespace TKMelo.Models.Entities
 {
     public class Session
     {
@@ -7,7 +9,7 @@
         public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
         public DateTimeOffset ExpiresAt { get; set; }
         public DateTimeOffset? RevokedAt { get; set; }
-        public string? IpAddress { get; set; }
+        public IPAddress? IpAddress { get; set; }
         public string? UserAgent { get; set; }
 
         public User User { get; set; } = null!;

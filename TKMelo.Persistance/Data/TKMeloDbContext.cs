@@ -56,7 +56,7 @@ namespace TKMelo.Persistance.Data
                 e.Property(x => x.Id).HasDefaultValueSql("gen_random_uuid()");
                 e.Property(x => x.CreatedAt).HasDefaultValueSql("now()");
                 e.HasIndex(x => x.UserId);
-                e.Property(x => x.IpAddress).HasMaxLength(45).IsRequired(false);
+                e.Property(x => x.IpAddress).HasColumnType("inet").IsRequired(false);
                 e.HasOne(x => x.User).WithMany(u => u.Sessions).HasForeignKey(x => x.UserId).OnDelete(DeleteBehavior.Cascade);
             });
 

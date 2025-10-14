@@ -1,0 +1,14 @@
+.vs/
+**/bin/
+**/obj/
+TKMelo/.vs/
+TKMelo/bin/
+TKMelo/obj/
+TKMelo.Library/bin/
+TKMelo.Library/obj/
+TKMelo.Models/bin/
+TKMelo.Models/obj/
+TKMelo.Persistance/bin/
+TKMelo.Persistance/obj/
+TKMelo.Test/bin/
+TKMelo.Test/obj/
