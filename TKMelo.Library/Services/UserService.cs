@@ -89,7 +89,7 @@ public class UserService : IUserService
         await _db.SaveChangesAsync(ct);
 
         var baseUrl = _smtp.Value.FrontendBaseUrl.TrimEnd('/');
-        var verifyUrl = $"{baseUrl}/verify-email?token={plainToken}";
+        var verifyUrl = $"{baseUrl}/verificar-correo?token={plainToken}";
 
         var html = $@"
                     <!doctype html>
