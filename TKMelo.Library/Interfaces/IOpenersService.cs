@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TKMelo.Library.DTOs.Openers;
+﻿using TKMelo.Library.DTOs.Openers;
 
 namespace TKMelo.Library.Interfaces
 {

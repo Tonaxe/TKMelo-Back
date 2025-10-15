@@ -18,6 +18,7 @@ namespace TKMelo.Library
 
             services.Configure<OpenAIOptions>(cfg.GetSection(OpenAIOptions.SectionName));
             services.AddHttpClient<IOpenersService, OpenersService>();
+            services.AddHttpClient<IReplyFromImageService, ReplyFromImageService>();
 
             return services;
         }

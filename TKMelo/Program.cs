@@ -12,19 +12,18 @@ const string CorsFrontend = "CorsFrontend";
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy(CorsFrontend, p =>
-        p.WithOrigins(
-             "http://localhost:4200",
-             "https://localhost:4200"
-         )
+        p.WithOrigins("http://localhost:4200", "https://localhost:4200")
          .AllowAnyHeader()
-         .AllowAnyMethod()
-    );
+         .AllowAnyMethod());
 });
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "TKMelo API", Version = "v1" });
+    c.MapType<IFormFile>(() => new OpenApiSchema { Type = "string", Format = "binary" });
+    c.CustomSchemaIds(t => t.FullName);
 
     var securityScheme = new OpenApiSecurityScheme
     {
@@ -37,18 +36,14 @@ builder.Services.AddSwaggerGen(c =>
         Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
     };
     c.AddSecurityDefinition("Bearer", securityScheme);
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        { securityScheme, Array.Empty<string>() }
-    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement { { securityScheme, Array.Empty<string>() } });
 });
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddLibrary(builder.Configuration);
 
 var jwt = builder.Configuration.GetSection("Jwt").Get<JwtOptions>()!;
-builder.Services
-    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(opt =>
     {
         opt.TokenValidationParameters = new()
@@ -66,12 +61,25 @@ builder.Services
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
+if (app.Environment.IsDevelopment())
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "TKMelo API v1");
-    c.RoutePrefix = "swagger";
-});
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "TKMelo API v1");
+        c.RoutePrefix = "swagger";
+    });
+}
+else
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "TKMelo API v1");
+        c.RoutePrefix = "swagger";
+    });
+}
 
 app.UseHttpsRedirection();
 app.UseCors(CorsFrontend);

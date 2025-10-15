@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TKMelo.Library.Options
+﻿namespace TKMelo.Library.Options
 {
     public class OpenAIOptions
     {
