@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TKMelo.Library.Interfaces;
+using TKMelo.Library.Options;
 using TKMelo.Library.Services;
 
 namespace TKMelo.Library
@@ -14,6 +15,9 @@ namespace TKMelo.Library
 
             services.Configure<JwtOptions>(cfg.GetSection("Jwt"));
             services.AddScoped<IUserService, UserService>();
+
+            services.Configure<OpenAIOptions>(cfg.GetSection(OpenAIOptions.SectionName));
+            services.AddHttpClient<IOpenersService, OpenersService>();
 
             return services;
         }

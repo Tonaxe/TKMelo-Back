@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TKMelo.Models\TKMelo.Models.csproj" />
     <ProjectReference Include="..\TKMelo.Persistance\TKMelo.Persistance.csproj" />
+	  <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
